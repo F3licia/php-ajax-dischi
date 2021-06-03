@@ -8,9 +8,15 @@ function getnPrint($data) {
  foreach($data as $element){
      $poster = $element["poster"];
      $title = $element["title"];
+     $author = $element["author"];
+     $genre = $element["genre"];
+     $year = $element["year"];
     echo "<img src='$poster'>";
-    echo "<h2>$title</h2>";
-   }  
+    echo "<h2>$author</h2>";
+    echo "<h3>$title</h3>";
+    echo "<h5>$year</h5>";
+    echo "<p>$genre</p>";
+   };  
 };
 
 
