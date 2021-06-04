@@ -1,7 +1,7 @@
 const app = new Vue ({
     el: "#app",
     data:{
-       recordsList:[]
+       recordsList:{}
     },
     methods: {
         fetchData(){

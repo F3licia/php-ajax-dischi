@@ -12,8 +12,17 @@
 <body>
     <div id="app">
 
-
-
+    <div class="container">
+            <div v-for="element in recordsList" class="card">
+                <div class="cover"><img alt="" v-bind:src="element.poster"> </div>
+                <div class="info">
+                    <h3 class="author">{{element.author}}</h3>
+                    <h5 class="title">{{element.title}}</h5>
+                    <h5 class="date">{{element.year}}</h5>
+                    <h5 class="date">{{element.genre}}</h5>
+                </div>
+            </div>
+        </div>
 
     
     </div>
