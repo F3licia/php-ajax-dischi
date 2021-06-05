@@ -1,14 +1,22 @@
 const app = new Vue ({
     el: "#app",
     data:{
-       recordsList:{}
+       recordsList:{},
+       search: "",  
     },
     methods: {
         fetchData(){
-           axios.get("server.php")
+           axios.get("server.php", {
+                 params:{
+                     genre : this.search
+                    }
+           })
            .then(resp => {
                  this.recordsList = resp.data;
            })
+        },
+        filter(){
+            this.fetchData()
         }
     },
 
@@ -16,3 +24,5 @@ const app = new Vue ({
         this.fetchData();
     }
 })
+
+
