@@ -2,13 +2,16 @@ const app = new Vue ({
     el: "#app",
     data:{
        recordsList:{},
-       search: "",  
+       searchBy: {
+          genres: "",  
+       }
+       
     },
     methods: {
         fetchData(){
            axios.get("server.php", {
-                 params:{
-                     genre : this.search
+                 params:{             //posso passare i parametri come argomenti nella chiamata ajax
+                     genre : this.searchBy.genres
                     }
            })
            .then(resp => {
