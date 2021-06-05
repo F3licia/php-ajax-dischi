@@ -3,7 +3,7 @@ const app = new Vue ({
     data:{
        recordsList:{},
        searchBy: {
-          genres: "",  
+          genres: "",
        }
        
     },
@@ -11,14 +11,14 @@ const app = new Vue ({
         fetchData(){
            axios.get("server.php", {
                  params:{             //posso passare i parametri come argomenti nella chiamata ajax
-                     genre : this.searchBy.genres
+                     genre : this.searchBy.genres,
                     }
            })
            .then(resp => {
                  this.recordsList = resp.data;
            })
         },
-        filter(){
+        search(){            //ripete la chiamata stavolta coi nuovi parametri input
             this.fetchData()
         }
     },

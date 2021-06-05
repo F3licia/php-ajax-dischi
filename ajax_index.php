@@ -12,8 +12,8 @@
 <body>
     <div id="app">
     <div>
-        <input type="text" v-on:keyup.enter ="filter" v-model="searchBy.genres" placeholder="Search by genre">
-        <button  @click="filter" v-bind="searchBy.genres" >&#128270;</button>
+        <input type="text" v-on:keyup.enter ="search" v-model="searchBy.genres" placeholder="Search by genre">
+        <button  @click="search" v-bind="searchBy.genres" >&#128270;</button>
     </div>
     <div class="container">
             <div v-for="element in recordsList" class="card">
