@@ -11,10 +11,12 @@
 </head>
 <body>
     <div id="app">
-    <div>
+
+    <div class="header">
         <input type="text" v-on:keyup.enter ="search" v-model="searchBy.genres" placeholder="Search by genre">
-        <button  @click="search" v-bind="searchBy.genres" >&#128270;</button>
+        <span class="buttonSearch"  @click="search" v-bind="searchBy.genres" >&#x1F50E;&#xFE0E;</span>
     </div>
+
     <div class="container">
             <div v-for="element in recordsList" class="card">
                 <div class="cover"><img alt="" v-bind:src="element.poster"> </div>
